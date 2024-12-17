@@ -1,0 +1,38 @@
+
+What is a vertex stream
+#
+the list of user defined vertex attributes needed for a shader
+#
+
+VAO
+#
+Vertex Array Object
+stores data for each attribute for each vertex to send to the shader
+#
+
+VBO
+#
+Vertex Buffer Object
+A buffer that stores the vertex position data
+and is used to send to the VAO
+#
+
+uv
+#
+texture coordinate so the graphics card knows which
+pixel of the texture to draw for each fragment
+#
+
+program
+#
+Stores shaders to be run on the gpu
+#
+
+Homogeneous coordinates
+#
+consists of four coordinates (x, y, z, w) where the relative point
+remains unchanged if the coordinates are multiplied by a common factor
+
+if w = 0 then the coordinates represent some point at infinity
+#S
+

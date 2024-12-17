@@ -1,0 +1,82 @@
+
+Start app through steam if this application isn't running from steam
+#
+SteamAPI_RestartAppIfNecessary(appId);
+#
+
+initialize and shutdown the steam api
+#
+SteamAPI_Init();
+SteamAPI_Shutdown();
+#
+
+Get number of friends
+#
+SteamFriends()->GetFriendCount(EFriendsFlags flag);
+#
+
+Get steam ids of friends
+#
+int count = SteamFriends()->GetFriendCount(EFriendsFlags flag);
+for (int i = 0; i < count; i++) {
+	CSteamID friendId = SteamFriends()->GetFriendByIndex(i, flag);
+}
+#
+
+Get name from steam id
+#
+SteamFriends()->GetFriendPersonaName(CSteamID);
+#
+
+Get current users name
+#
+SteamFriends()->GetPersonaName();
+#
+
+EFriendsFlags for regular friends
+#
+k_EFriendFlagImmediate
+#
+
+callback for steam overlay state changed
+#
+GameOverlayChanged_t
+m_bActive
+#
+
+callback for when the user requests to join a lobby
+#
+GameLobbyJoinRequested_t
+m_steamIDLobby : CSteamID of lobby
+m_steamIDFriend : CSteamID of friend joined through
+#
+
+Get the current users steam id
+#
+SteamUser()->GetSteamID();
+#
+
+initialize relay network
+#
+SteamNetworkingUtils()->InitRelayNetworkAccess();
+#
+
+check relay network status
+#
+SteamNetworkingUtils()->GetRelayNetworkStatus(SteamRelayNetworkStatus_t*) 
+	== k_ESteamNetworkingAvailability_Current
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+

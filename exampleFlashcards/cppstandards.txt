@@ -1,0 +1,155 @@
+
+what does <unordered_map> add
+#
+Classes: unordered_map, unordered_multimap
+Functions: begin and end iterator
+#
+
+check if unordered_map is empty
+#
+container.empty()
+#
+
+get number of elements in unordered_map
+#
+container.size()
+#
+
+get maxmimum size of unordered_map
+#
+container.max_size()
+#
+
+assign value to unordered_map at key
+#
+container[key] = value
+#
+
+error checked get unordered_map value
+#
+container.at(key)
+#
+
+complexity for unordered_map functions
+#
+average is constant
+worst case is linear with size
+#
+
+get number of elements for a key in an unordered_map
+#
+container.count(key)
+#
+
+search for a mapped value using a key in an unordered_map
+#
+container.find(key)
+returns container.end() if no key was found
+#
+
+check if a key exists in an unordered_map
+#
+container.count(key) >= 1
+#
+
+emplace element at key in an unordered_map
+#
+container.emplace(key, value)
+#
+
+all insertion methods for unordered_map
+#
+container.insert(pair) // copy insertion
+
+container.insert(std::make_pair<key_type, value_type>(key, value)) // move insertion
+
+container.insert(iterator.begin(), iterator.end()) // iterator range insertion
+
+container.insert({{key, value}, {key, value}...}) // initializer list insertion
+#
+
+all remove methods for unordered_map
+#
+container.erase(iterator position) // by iterator position
+
+container.erase(key) // by key
+
+container.erase(first, last) // by iterator range
+#
+
+clear all elements in an unordered_map
+#
+container.clear()
+#
+
+What is a variable with external linkage
+#
+A global variable that can be accessed through the whole program
+#
+
+What is a variable with internal linkage
+#
+A global variable that can only be accessed throughout the file
+#
+
+What is a variable with no linkage
+#
+A local variable
+#
+
+How to make a variable explicitly have external linkage
+#
+extern keyword
+#
+
+How to make a variable explicitly have internal linkage
+#
+static keyword on a global variable
+static on local variables has a different meaning
+#
+
+What does extern do
+#
+makes a global variable have external linkage
+#
+
+What does static do
+#
+Gives global variables internal linkage
+Makes local variables have a single global instance
+#
+
+What variables have internal linkage by default
+#
+non-const global variables
+#
+
+What variables have external linkage by default
+#
+const global variables
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

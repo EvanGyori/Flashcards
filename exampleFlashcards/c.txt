@@ -1,0 +1,171 @@
+
+library for reading/writing to files
+#
+stdio.h
+#
+
+open a file
+#
+FILE* file = fopen(name, mode);
+#
+
+all modes for opening a file
+#
+w: write to file
+r: read from file
+a: append, write to end of file
+add b: opens file in binary mode
+add +: opens file in read and write mode
+#
+
+write text to file
+#
+FILE* file = fopen(name, "w");
+fprintf("%s", cstring);
+#
+
+read text from file
+#
+FILE* file = fopen(name, "r");
+fscanf("%s", cstring);
+#
+
+close file
+#
+fclose(file);
+#
+
+read binary from file
+#
+FILE* file = fopen(name, "rb");
+fread(addressToStorage, sizeofData, count, file);
+#
+
+write binary to file
+#
+FILE* file = fopen(name, "wb");
+fwrite(addressToData, sizeofData, count, file);
+#
+
+what does the bit operator & do
+#
+does AND on each bit, if both bits are 1, the resulting bit is 1
+otherwise it is 0
+#
+
+what does the bit operator | do
+#
+does OR on each bit, if either or both of the bits are 1
+the resulting bit is 1, otherwise it is 0
+#
+
+what does the bit operator ^ do
+#
+does XOR on each bit, if only one of the bits is 1, 
+the resulting bit is 1, otherwise it is 0
+#
+
+what does the bit operator ~ do
+#
+reverses all the bits (1 to 0, 0 to 1)
+#
+
+Get memory size of variable type
+#
+sizeof(type);
+#
+
+how to dereference a void pointer
+#
+convert it to another pointer type first
+
+void* ptr;
+*(int*)ptr;
+#
+
+how to take in command line arguments
+#
+int main(int argc, char const** argv)
+#
+
+Display text to terminal
+#
+printf("", ...)
+#
+
+escape sequences
+#
+text inside a format string in a c function that inputs a variable
+printf("int: %d", int variable);
+%s: cstring
+%d: int
+%u: unsigned int
+%c: single char
+%x: hexadecimal
+%p: pointer
+prefix l: long (%ld)
+#
+
+take input from console
+#
+scanf("escape sequence", &variable);
+#
+
+copy contents of one string to another
+#
+strcpy(dest, src);
+#
+
+append to a string
+#
+strcat(dest, src);
+#
+
+get length of cstring
+#
+strlen(str);
+#
+
+allocate and deallocate memory in the heap segment
+#
+void* ptr = malloc(# of bytes);
+free(ptr);
+#
+
+convert string to integer
+#
+atoi(str);
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

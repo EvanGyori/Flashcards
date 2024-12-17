@@ -1,0 +1,135 @@
+
+automatically deduce return type
+#
+auto
+#
+
+what is trailing return types useful for
+#
+using function parameters in the computation of the return type
+#
+
+get common type from expression, variable or value
+#
+decltype()
+#
+
+specialization of class template
+#
+overloading a class template to optimize for a certain type
+EX:
+template <typename T>
+class Test {};
+
+// this overloaded version will be used for int type
+template <>
+class Test<int> {};
+#
+
+partial specialization of class template
+#
+overloading a class template to optimize a part of a type
+such as pointer or const types
+
+EX:
+template <typename T>
+class Test{};
+
+// compiler prefers for pointer types
+template <typename T>
+class Test<T*> {};
+#
+
+deduction guide
+#
+tells the compiler how to deduce a template argument
+
+template <typename T>
+class Test;
+
+Test(const char*) -> Test<std::string>
+
+when inputing a const char* type into the constructor,
+std::string type will be deduced and the variable type will
+be converted
+#
+
+What is a type alias
+#
+Declaring another name for an already existing type
+#
+
+using type alias in c
+#
+typedef type name;
+#
+
+using type alias in c++
+#
+using name = type;
+#
+
+what is alias declaration
+#
+defining a another name for an already existing type
+#
+
+alias template
+#
+using a template for a C++ type alias to define a range/family of types
+
+EX:
+template <typename T>
+using ptrClass = Class<T*>;
+#
+
+What is a nontype template parameter
+#
+a template parameter that takes in a value
+
+EX:
+template <int val>
+#
+
+what are the restrictions of nontype template parameters
+#
+cant be a floating point or class object
+#
+
+how to turn a reference type to a temporary type
+#
+std::decay_t<T>
+
+std::decay<int&> // turns int& to int
+#
+
+what does std::decay<T> do
+#
+turns the type from lvalue to rvalue,
+function to pointer and
+array to pointer
+
+must use typename std::decay<T>::type to get the type
+or the abbreviation
+#
+
+what does std::common_type<...> do
+#
+returns a general/common type between the given types
+#
+
+Check if a type is default constructible
+#
+std::is_default_constructible_v<T>
+#
+
+
+
+
+
+
+
+
+
+
+

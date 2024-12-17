@@ -1,0 +1,131 @@
+
+view commands in detail
+#
+git help log
+#
+
+Set name and email in config
+#
+git config --global user.name "name"
+git config --global user.email "email"
+#
+
+initialize git repository
+#
+git init
+#
+
+view hidden folders and files
+#
+add -a tag to ls
+#
+
+make a commit
+#
+git commit
+#
+
+add message to commit
+#
+git commit -m "message"
+#
+
+get brief description of current status
+#
+git status
+#
+
+view staged changes
+#
+git diff --cached
+#
+
+view changes added to cache
+#
+git diff --cached
+#
+
+view unstaged changes
+#
+git diff
+#
+
+view changes not added to cache
+#
+git diff
+#
+
+undo file changes to previous commit
+#
+git restore <file>
+#
+
+stage changes
+#
+git add <file>
+#
+
+unstage changes
+#
+git restore --staged <file>
+#
+
+stage and commit all changes
+#
+git commit -a
+#
+
+delete git repository
+#
+rm -f -r .git
+#
+
+view history of commits
+#
+git log
+#
+
+view history of changes in each commit
+#
+git log -p
+#
+
+create a new branch
+#
+git branch name
+#
+
+list all existing branches
+#
+bit branch
+#
+
+change to different branch
+#
+git switch name
+#
+
+merge two branches
+#
+git merge otherName
+#
+
+check merge conflictions
+#
+git diff
+#
+
+delete branch
+#
+git branch -d name
+#
+
+force delete branch
+#
+git branch -D name
+#
+
+
+
+
+

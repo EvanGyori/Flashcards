@@ -1,0 +1,85 @@
+
+initialize glfw
+#
+glfwInit();
+#
+
+create error callback
+#
+void error_callback(int code, const char* msg);
+glfwSetErrorCallback(error_callback);
+#
+
+Set number of samples on window for multisampling
+#
+glfwWindowHint(GLFW_SAMPLES, #);
+#
+
+Make window not resizable
+#
+glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+#
+
+Make window use no graphics api
+#
+glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+#
+
+create a window
+#
+GLFWwindow* window = glfwCreateWindow(width, height, name, fullscreen to monitor, share between monitors);
+
+last two values can be nullptr
+#
+
+Make opengl target a window
+#
+glfwMakeContextCurrent(window);
+#
+
+Check if window should close
+#
+glfwWindowShouldClose(window);
+returns bool
+#
+
+Set window to close
+#
+glfwSetWindowShouldClose(window, bool);
+#
+
+Put data into window and retreive it 
+so it can be accessed within the callbacks
+#
+glfwSetWindowUserPointer(window, void*);
+void* ptr = glfwGetWindowUserPointer(window);
+#
+
+check a key's current state
+#
+glfwGetKey(window, GLFW_KEY_);
+some states are GLFW_PRESS, GLFW_RELEASE...
+#
+
+create a callback for when the mouse moves
+#
+void cursor_pos_callback(GLFWwindow* window, double xpos, double ypos);
+glfwSetCursorPosCallback(window, callback);
+#
+
+create a callback for when the scroll wheel is used
+#
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
+glfwSetScrollCallback(window, callback);
+#
+
+Create a callback for when a key's state is changed
+#
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+
+glfwSetKeyCallback(window, callback);
+#
+
+
+
+

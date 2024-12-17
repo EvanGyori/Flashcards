@@ -1,0 +1,99 @@
+
+What are listeners
+#
+OpenAL objects that tells AL where the user is listening from
+#
+
+what are sources
+#
+OpenAL objects that specify a sound, its position and other attributes
+#
+
+what are buffers in the context of OpenAL
+#
+Stores the audio data
+#
+
+What are modes
+#
+changes the way OpenAL will process the audio
+#
+
+What are the two types of OpenAL API calls
+#
+al and alc
+#
+
+open a device then cleanup
+#
+ALCdevice* device = alcOpenDevice(cstring name);
+use nullptr for default device
+
+// cleanup
+alcCloseDevice(device);
+#
+
+Create a context and set current then cleanup
+#
+ALCcontext* context = alcCreateContext(device, attrbs);
+alcMakeContextCurrent(context);
+
+use nullptr for attrbs to set none
+
+// cleanup
+alcMakeContextCurrent(nullptr);
+alcDestroyContext(context);
+#
+
+create buffer and fill with data
+#
+ALuint buffer;
+alGenBuffers(1, &buffer);
+alBufferData(buffer, ALenum format, data, size, sampleRate);
+clear data
+#
+
+create source and play
+#
+ALuint source;
+alGenSources(1, &source);
+alSourcei(source, AL_BUFFER, bufferId);
+
+alSourcePlay(source);
+ALenum state = AL_PLAYING;
+while (state == AL_PLAYING) {
+	alGetSourcei(source, AL_SOURCE_STATE, &state);
+}
+#
+
+cleanup source
+#
+alDeleteSources(1, &source);
+#
+
+cleanup buffer
+#
+alDeleteBuffers(1, &buffer);
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
